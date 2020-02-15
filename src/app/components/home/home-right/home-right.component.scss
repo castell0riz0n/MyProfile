@@ -1,0 +1,114 @@
+.last-name {
+  font-variant-ligatures: no-common-ligatures;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  box-sizing: border-box;
+  font-size: 60px;
+  color: #fff;
+  background-color: #222;
+  margin: 0;
+  padding: 35px 50px;
+  display: inline-block;
+  line-height: 1;
+}
+
+
+.home-title {
+  font-variant-ligatures: no-common-ligatures;
+  box-sizing: border-box;
+  line-height: 1.7;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInLeft;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #222;
+  background-color: #fff;
+  margin: 0;
+  padding: 10px 10px;
+  word-spacing: normal;
+  display: inline-block;
+}
+
+.social-bar-container {
+  line-height: 1.7;
+  font-variant-ligatures: no-common-ligatures;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInUp;
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  bottom: 80px;
+  display: block;
+}
+
+.social-bar-ul {
+  line-height: 1.7;
+  font-variant-ligatures: no-common-ligatures;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.social-bar-ul>li {
+  line-height: 1.7;
+  font-variant-ligatures: no-common-ligatures;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777;
+  list-style: none;
+  list-style-image: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: left;
+}
+
+.social-bar-ul>li>a {
+  font-weight: 900;
+  font-size: 16px;
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Pro";
+  color: #222;
+  border-right: 1px solid #f3f3f3;
+  background-color: #fff;
+  display: block;
+  text-indent: -500em;
+  height: 5em;
+  width: 5em;
+  line-height: 5em;
+  text-align: center;
+  position: relative;
+  outline: none !important;
+  text-decoration: none !important;
+  transition: color .2s ease-in-out;
+}

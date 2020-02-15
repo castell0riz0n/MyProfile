@@ -1,0 +1,20 @@
+.first-name {
+  font-variant-ligatures: no-common-ligatures;
+  white-space: nowrap;
+  letter-spacing: 0;
+  word-spacing: 0;
+  text-align: left;
+  box-sizing: border-box;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  //animation-name: slideInUp;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  color: #fff;
+  background-color: #0072c0;
+  margin: 0;
+  padding: 35px 50px;
+  line-height: 1;
+  display: inline-block;
+}

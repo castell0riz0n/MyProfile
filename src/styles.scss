@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./../node_modules/font-awesome/scss/fontawesome.scss";
+@import "./../node_modules/animate.css/animate.min.css";
+
+@import './app/shared/styles/_vars.scss';
+@import './app/shared/styles/_theme.scss';
+@import './app/shared/styles/_sidebar.scss';
+
+
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-display: $fa-font-display;
+  src: url('./../node_modules/font-awesome/webfonts/fa-solid-900.eot');
+  src: url('./../node_modules/font-awesome/webfonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+    url('./../node_modules/font-awesome/webfonts/fa-solid-900.woff2') format('woff2'),
+    url('./../node_modules/font-awesome/webfonts/fa-solid-900.woff') format('woff'),
+    url('./../node_modules/font-awesome/webfonts/fa-solid-900.ttf') format('truetype'),
+    url('./../node_modules/font-awesome/webfonts/fa-solid-900.svg#fontawesome') format('svg');
+}

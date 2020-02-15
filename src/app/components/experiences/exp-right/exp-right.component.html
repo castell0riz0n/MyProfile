@@ -1,0 +1,32 @@
+<div class="full-height overflow-auto">
+  <div *ngFor="let exp of _experienceList">
+    <div class="card mb-3" style="width: fit-content;">
+      <div class="row no-gutters">
+        <div class="col-md-2" style="text-align: center;">
+          <p class="badge badge-info badge-pill ml-2 mt-5">
+            Start Date : {{ exp.startDate | date }}
+          </p>
+          <ng-container *ngIf="!exp.stillWorkingHere; else elseTemplate">
+            <p class="badge badge-warning badge-pill ml-2">
+              <small class="text-muted">
+                End Date : {{ exp.endDate | date }}
+              </small>
+            </p>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <p class="badge badge-warning badge-pill ml-2">
+              <small class="text-muted">Working here</small>
+            </p>
+          </ng-template>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h3 class="card-title">{{ exp.companyName }}</h3>
+            <hr>
+            <p class="card-text border p-2" [innerHTML]="exp.details"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
