@@ -1,6 +1,6 @@
 .last-name {
   font-variant-ligatures: no-common-ligatures;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   box-sizing: border-box;
   font-size: 60px;
@@ -12,7 +12,6 @@
   line-height: 1;
 }
 
-
 .home-title {
   font-variant-ligatures: no-common-ligatures;
   box-sizing: border-box;
@@ -20,7 +19,7 @@
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: slideInLeft;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 30px;
   color: #222;
@@ -34,7 +33,7 @@
 .social-bar-container {
   line-height: 1.7;
   font-variant-ligatures: no-common-ligatures;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #777;
@@ -54,7 +53,7 @@
 .social-bar-ul {
   line-height: 1.7;
   font-variant-ligatures: no-common-ligatures;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #777;
@@ -68,10 +67,10 @@
   vertical-align: bottom;
 }
 
-.social-bar-ul>li {
+.social-bar-ul > li {
   line-height: 1.7;
   font-variant-ligatures: no-common-ligatures;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #777;
@@ -84,7 +83,7 @@
   float: left;
 }
 
-.social-bar-ul>li>a {
+.social-bar-ul > li > a {
   font-weight: 900;
   font-size: 16px;
   list-style: none;
@@ -110,5 +109,10 @@
   position: relative;
   outline: none !important;
   text-decoration: none !important;
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+
+  svg {
+    top: 20px;
+    font-size: 30px !important;
+  }
 }
