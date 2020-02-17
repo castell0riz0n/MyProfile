@@ -18,6 +18,10 @@ import { ExperiencesComponent } from './components/experiences/experiences.compo
 import { ExpLeftComponent } from './components/experiences/exp-left/exp-left.component';
 import { ExpRightComponent } from './components/experiences/exp-right/exp-right.component';
 import { DataService } from './services/data.service';
+import { AboutComponent } from './components/about/about.component';
+import { ResumeComponent } from './components/resume/resume.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 export function startupServiceFactory(data: DataService) {
   return () => {
@@ -35,7 +39,11 @@ export function startupServiceFactory(data: DataService) {
     HomeLeftComponent,
     ExperiencesComponent,
     ExpLeftComponent,
-    ExpRightComponent
+    ExpRightComponent,
+    AboutComponent,
+    ResumeComponent,
+    PortfolioComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

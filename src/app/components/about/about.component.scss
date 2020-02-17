@@ -1,0 +1,46 @@
+#right-div {
+  line-height: 1.7;
+  font-variant-ligatures: no-common-ligatures;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  margin: 0;
+  min-height: 100%;
+  padding: 80px;
+  border-bottom: 50px solid #fff;
+}
+
+.border {
+  font-variant-ligatures: no-common-ligatures;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  line-height: 1.2;
+  word-wrap: break-word;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: #222;
+  position: relative;
+  margin-bottom: 55px;
+}
+
+.border ::after {
+  background-color: #0072c0;
+  width: 100px;
+  height: 3px;
+  position: absolute;
+  text-align: center;
+  bottom: -15px;
+  left: 0;
+  margin: 0;
+  z-index: 1;
+  content: '';
+}
