@@ -4,4 +4,30 @@
       {{ _personInfo.firstName }}
     </span>
   </div>
+
+  <div class="mt-3">
+    <div class="profile-card">
+      <div class="profile-card__img">
+        <img src="assets/AliKh.jpg" alt="profile card">
+      </div>
+
+      <div class="profile-card__cnt">
+        <div class="profile-card__name">Hi, Hope you doing Great!</div>
+        <div class="profile-card__txt">Fullstack Developer from <strong>Tehran, Iran</strong></div>
+
+        <div class="profile-card-inf">
+          <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title"></div>
+            <div class="profile-card-inf__txt">
+              <p [innerHTML]="_personInfo.about"></p>
+            </div>
+          </div>
+        </div>
+        <div class="profile-card-ctr">
+          <button class="profile-card__button button--green">Message</button>
+          <button class="profile-card__button button--orange">Follow</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

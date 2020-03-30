@@ -1,4 +1,5 @@
 import { SkillLevel } from '../enums/skill-level.enum';
+import { SkillCategory } from '../enums/skill-category.enum';
 
 export interface BaseResponse<T> {
   result: T;
@@ -58,6 +59,8 @@ export interface Experience {
 export interface Skill {
   skillName: string;
   level: SkillLevel;
+  percent?: number;
+  category: SkillCategory;
   personId: number;
   userId: number;
   id: number;

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Personinfo, IGetResumeResponse } from '../../../models/IGetResumeResp.interface';
+import { Personinfo, IGetResumeResponse, ContactInfo } from '../../../models/IGetResumeResp.interface';
 import { TooltipConfig } from 'ngx-bootstrap/tooltip';
 import { DataService } from '../../../services/data.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-right',
@@ -18,13 +19,32 @@ export class HomeRightComponent implements OnInit {
     userId: 0,
     id: 0
   };
+  _contactInfo: ContactInfo = {
+    emailAddress: '',
+    phoneNumber: '',
+    mobileNumber: '',
+    linkedIn: '',
+    github: '',
+    telegramAccount: '',
+    personId: 0,
+    userId: 0,
+    id: 0
+  }
 
   constructor(
-    private _data: DataService
+    private _data: DataService,
+    private _sanitizer: DomSanitizer
   ) { }
 
   ngOnInit() {
-    this._data.currentResumeData.subscribe(res => this._personInfo = res.person);
+    this._data.currentResumeData.subscribe(res => {
+      this._personInfo = res.person;
+      this._contactInfo = res.contactInfo;
+    });
+  }
+
+  sanitize(url: string) {
+    return this._sanitizer.bypassSecurityTrustUrl(url);
   }
 
 }

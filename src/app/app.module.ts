@@ -5,6 +5,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { DeviceDetectorModule, DeviceDetectorService } from 'ngx-device-detector';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
@@ -22,6 +24,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { SkillsContentComponent } from './components/skills/skills-content/skills-content.component';
 
 export function startupServiceFactory(data: DataService) {
   return () => {
@@ -43,16 +47,20 @@ export function startupServiceFactory(data: DataService) {
     AboutComponent,
     ResumeComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    SkillsComponent,
+    SkillsContentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     TooltipModule.forRoot(),
+    ModalModule.forRoot(),
     FontAwesomeModule,
     HttpClientModule,
-    ScrollingModule
+    ScrollingModule,
+    DeviceDetectorModule.forRoot()
   ],
   providers: [
     DataService,
@@ -61,7 +69,8 @@ export function startupServiceFactory(data: DataService) {
       useFactory: startupServiceFactory,
       deps: [DataService],
       multi: true
-    }
+    },
+    DeviceDetectorService
   ],
   bootstrap: [AppComponent]
 })

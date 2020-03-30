@@ -1,32 +1,120 @@
-<div class="full-height overflow-auto">
-  <div *ngFor="let exp of _experienceList">
-    <div class="card mb-3" style="width: fit-content;">
-      <div class="row no-gutters">
-        <div class="col-md-2" style="text-align: center;">
-          <p class="badge badge-info badge-pill ml-2 mt-5">
-            Start Date : {{ exp.startDate | date }}
-          </p>
-          <ng-container *ngIf="!exp.stillWorkingHere; else elseTemplate">
-            <p class="badge badge-warning badge-pill ml-2">
-              <small class="text-muted">
-                End Date : {{ exp.endDate | date }}
-              </small>
-            </p>
-          </ng-container>
-          <ng-template #elseTemplate>
-            <p class="badge badge-warning badge-pill ml-2">
-              <small class="text-muted">Working here</small>
-            </p>
-          </ng-template>
-        </div>
-        <div class="col-md-9">
-          <div class="card-body">
-            <h3 class="card-title">{{ exp.companyName }}</h3>
-            <hr>
-            <p class="card-text border p-2" [innerHTML]="exp.details"></p>
+<div class="full-height bg-image-style xyz">
+  <section id="timeline" class="overflow-auto full-height xyz">
+    <h1>My Experiences</h1>
+    <p class="leader">
+      All My Experiences are not listed here and I have more experiences in
+      other Fields like building constructions and more...
+    </p>
+    <div class="demo-card-wrapper overflow-auto xyz">
+      <div class="demo-card demo-card--step1">
+        <div class="head">
+          <div class="number-box">
+            <span>01</span>
           </div>
+          <h2>
+            <span class="small mb-2">
+              <i class="fas fa-chess-clock fa-sm"></i>
+              {{ _experienceList[0].startDate | date: "MMM y" }} -
+            </span>
+            {{ _experienceList[0].companyName }}
+            <span class="small mt-2">
+              <i class="fas fa-map-marker-alt fa-sm"></i>
+              Tehran - Iran
+            </span>
+          </h2>
+        </div>
+        <div class="body overflow-auto">
+          <p [innerHTML]="_experienceList[0].details"></p>
+          <img src="assets/faranegar.png" alt="Graphic" />
         </div>
       </div>
+
+      <div class="demo-card demo-card--step2">
+        <div class="head">
+          <div class="number-box">
+            <span>02</span>
+          </div>
+          <h2>
+            <span class="small mb-2">
+              <i class="fas fa-chess-clock fa-sm"></i>
+              {{ _experienceList[1].startDate | date: "MMM y" }} -
+              {{ _experienceList[1].endDate | date: "MMM y" }}</span>
+            {{ _experienceList[1].companyName }}
+            <span class="small mt-2">
+              <i class="fas fa-map-marker-alt fa-sm"></i>
+              Tehran - Iran
+            </span>
+          </h2>
+        </div>
+        <div class="body overflow-auto">
+          <p [innerHTML]="_experienceList[1].details"></p>
+          <img src="http://placehold.it/1000x500" alt="Graphic" />
+        </div>
+      </div>
+
+      <div class="demo-card demo-card--step3">
+        <div class="head">
+          <div class="number-box">
+            <span>03</span>
+          </div>
+          <h2>
+            <span class="small mb-2">
+              <i class="fas fa-chess-clock fa-sm"></i>
+              {{ _experienceList[2].startDate | date: "MMM y" }} -
+              {{ _experienceList[2].endDate | date: "MMM y" }}
+            </span>
+            {{ _experienceList[2].companyName }}
+            <span class="small mt-2">
+              <i class="fas fa-map-marker-alt fa-sm"></i>
+              Helsinki - Finland
+            </span>
+          </h2>
+        </div>
+        <div class="body overflow-auto">
+          <p [innerHTML]="_experienceList[2].details"></p>
+          <img src="http://placehold.it/1000x500" alt="Graphic" />
+        </div>
+      </div>
+
+      <div class="demo-card demo-card--step4">
+        <div class="head">
+          <div class="number-box">
+            <span>04</span>
+          </div>
+          <h2>
+            <span class="small mb-2">
+              <i class="fas fa-chess-clock fa-sm"></i>
+              {{ _experienceList[3].startDate | date: "MMM y" }} -
+              {{ _experienceList[3].endDate | date: "MMM y" }}</span>
+            {{ _experienceList[3].companyName }}
+            <span class="small mt-2">
+              <i class="fas fa-map-marker-alt fa-sm"></i>
+              Tehran - Iran
+            </span>
+          </h2>
+        </div>
+        <div class="body overflow-auto">
+          <p [innerHTML]="_experienceList[3].details"></p>
+          <img src="http://placehold.it/1000x500" alt="Graphic" />
+        </div>
+      </div>
+
+      <!-- <div class="demo-card demo-card--step5">
+        <div class="head">
+          <div class="number-box">
+            <span>05</span>
+          </div>
+          <h2><span class="small">Subtitle</span> Conversion</h2>
+        </div>
+        <div class="body">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+            reiciendis deserunt doloribus consequatur, laudantium odio dolorum
+            laboriosam.
+          </p>
+          <img src="http://placehold.it/1000x500" alt="Graphic" />
+        </div>
+      </div>-->
     </div>
-  </div>
+  </section>
 </div>
